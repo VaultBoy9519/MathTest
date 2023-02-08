@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тест по математике</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body class="bg-dark bg-gradient">
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center text-white">Проверь свои знания по математике</h1>
+        </div>
+    </div>
+</div>
+
+<!Три колонки>
+<div class="container">
+    <div class="row">
+        <!Первая колонка, вопросы с 1 по 5>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+            <div class="mb-3">
+                <label for="question1" class="form-label questionString disabled readonly" ></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question2" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question3" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question4" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question5" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+        </div>
+        <!Вторая колонка, вопросы с 6 по 10>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+            <div class="mb-3">
+                <label for="question6" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question7" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question8" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question9" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="question10" class="form-label questionString"></label>
+                <input type="text" class="form-control questionInputForm" disabled>
+            </div>
+        </div>
+
+        <!Третья колонка, кнопки и поля>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="container">
+                <br>
+                <div class="row">
+                    <div class="btn-group" role="group" aria-label="Рабочие кнопки">
+                        <button type="button" class="btn btn-secondary" id="startButton">Начать новый тест</button>
+                        <button type="button" class="btn btn-secondary" id="finishButton">Отправить результат</button>
+                        <button type="button" class="btn btn-secondary" id="renewButton">Пройти тест заново</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4 g-1 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <div class="thisCard styleCard bg-gradient mb-3 rectangle">
+                            <div class="card-header text-center" style="font-size: 13px">Правильных ответов:</div>
+                            <div class="card-body">
+                                <p class="card-text" id="boxGoodQuestion"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 g-1 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <div class="thisCard styleCardGrade">
+                            <div class="card-header text-center" style="font-size: 13px">Оценка:</div>
+                            <div class="card-body">
+                                <p class="card-text" id="boxGrade"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 g-1 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <div class="thisCard styleCard bg-gradient mb-3 rectangle">
+                            <div class="card-header text-center" style="font-size: 13px">Времени затрачено:</div>
+                            <div class="card-body">
+                                <p class="card-text" id="boxEndTime"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown center">
+                        <button class="btn btn-secondary dropdown-toggle center" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Выбрать уровень сложности
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark center" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" id="Easy" href="#">Низкий</a></li>
+                            <li><a class="dropdown-item" id="Medium" href="#">Средний</a></li>
+                            <li><a class="dropdown-item" id="Hard" href="#">Высокий</a></li>
+                        </ul>
+                        <br>
+                        <br>
+                    </div>
+<!--                    <div class="btn-group-vertical" role="group" aria-label="Тестовые кнопки">-->
+<!--                        <button type="button" class="btn btn-secondary" id="testButton">Ввести true result</button>-->
+<!--                        <button type="button" class="btn btn-secondary" id="testButton2">Ввести false result</button>-->
+<!--                        <button type="button" class="btn btn-secondary" id="testButton3">Ввести true/false</button>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+<br>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+</html>
